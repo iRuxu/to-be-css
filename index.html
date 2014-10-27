@@ -1,79 +1,130 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
+<head>
+<title>To be CSS - iRuxu.com</title>
+<meta charset="utf-8"/>
+<meta name="keywords" content="css,to be css,iruxu" />
+<meta name="description" content="A tool for creat CSS3 quickly" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="renderer" content="webkit">
+<meta http-equiv="Cache-Control" content="no-transform"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<link rel="icon" type="image/x-icon" href="img/favicon.ico">
+<base target="_blank">
+<!--[if lt IE 9]>
+<script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+<![endif]-->
+<script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+<script src="longshadows/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="longshadows/jquery.xcolor.min.js"></script>
+<script src="longshadows/compressed.js"></script>
+<link rel="stylesheet" href="style.css">
+<script>
+	$(function(){
+		//内容切换
+		$("h2").click(function(){
+			$(".content").css('display','none');
+			$("h2").removeClass('ctcat');
+			var i = $(this).index('h2');
+			var num = $(".content").eq(i);
+			$(num).css('display','block');
+			$(this).addClass('ctcat');
+		})
+		
+		//h3开关
+		$("#main").on('click','h3',function(){
+			$(this).next('div').slideToggle('slow');
+			var tg3 = $(this).children('span').html();
+			if(tg3=='-'){
+				$(this).children('span').html('+');}
+			else if(tg3=='+'){
+				$(this).children('span').html('-');;
+			};
+		});
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="To-be-css : A tool for creat css3 style quickly">
+		//h4开关
+		$("#main").on('click','h4',function(){
+			$(this).next('ul').slideToggle('slow');
+			var tg4 = $(this).children('span').html();
+			if(tg4=='-'){
+				$(this).children('span').html('+');}
+			else if(tg4=='+'){
+				$(this).children('span').html('-');;
+			};
+		})
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+		//tips显示
+		$("#main").on('mouseover','h4+ul>li',function(e){
+			$(this).children('span').css({
+					left:e.pageX+12+'px',
+					top:e.pageY+8+'px',
+					display:'block'
+				})
+			}).on('mouseout','h4+ul>li',function(){
+				$(this).children('span').css({
+					display:'none'
+				})
+			})
 
-    <title>To-be-css</title>
-  </head>
+		//关闭片段盒子
+		$("#closebox").click(function(){
+			$("#snippet").css('display','none');
+		})
 
-  <body>
+		//tips添加至snippet box
+		$("#main").on('click','h4+ul>li',function(){
+			var infos = $(this).children('span').html();
+			$("#snippet").css('display','block');
+			$("#box").html(infos);
+		})
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/iRuxu/to-be-css">View on GitHub</a>
+		//阻止默认行为
+		$("a:not([href^=http])").each(function(){
+			$(this).click(function(e){
+				e.preventDefault();
+			})
+		})
 
-          <h1 id="project_title">To-be-css</h1>
-          <h2 id="project_tagline">A tool for creat css3 style quickly</h2>
+		//直接link阻止冒泡
+		$("a[href^='http']").each(function(){
+			$(this).click(function(e){
+				e.stopPropagation();
+			})
+		})
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/iRuxu/to-be-css/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/iRuxu/to-be-css/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
+	})
+</script>
+</head>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+<body>
+<div id="snippet">
+	<h6>iRuxu's Snippet Box </h6>
+	<span id="closebox">×</span>
+	<p id="box">
+		<!-- some snippet will be show-->
+	</p>
+</div>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<header>
+	<h1 title="iRuxu's CSS TOOLS">TO BE CSS</h1>
+  <div id="nav">
+	<ul>
+		<h2 class="ctcat">Long Shadow</h2>
+		<h2>Triangle</h2>
+	</ul>
+  </div>
+	<p>
+		<a href="http://iruxu.com">[ 最新 ]</a> 
+		<span style="background:#fff;border-radius:8px;padding:0 10px"><a href="http://weibo.com/yuanzi0512"><img src="img/sina.png" width="12px" alt="iruxu的微博" title="Follow me on 微博"></a> <a href="mailto:17229398@qq.com"><img src="img/email.png" width="12px" alt="iruxu的电子邮件" title="email:17229398@qq.com"></a></span>
+		<br><a href="http://iruxu.com/to-be-css">http://iruxu.com/to-be-css</a>
+	</p>	
+</header>
+<div id="main" class="main clearfix">
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">To-be-css maintained by <a href="https://github.com/iRuxu">iRuxu</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
+</div>
+<footer>
+	<h5>BOOKMARK</h5>
+</footer> 
+<div style="display:none"><script src="http://s6.cnzz.com/z_stat.php?id=1253473928&web_id=1253473928" language="JavaScript"></script></div>
+</body>
 </html>
