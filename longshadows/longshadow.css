@@ -69,7 +69,7 @@
 #settings .input-group:not(.disabled) .sliderWrap.active strong {
 	color: #ccc;
 }
-
+.colpick{z-index:200;padding-top:20px;}
 
 #settings .sliderWrap label
 {
@@ -90,7 +90,8 @@
     padding: 0 5px 0 0;
 
     text-align: right;
-    float:right;
+   /* float:right;*/
+    position: relative;
 
     color: rgba(0,0,0,.75);
     border-radius: 2px;
@@ -121,6 +122,8 @@
 
     -webkit-font-smoothing: antialiased;
 }
+
+#settings label input.colorpik{position: absolute;right:22px;top:3px;}
 
 #settings label.color
 {

@@ -4,7 +4,7 @@ $(document).ready(function() {
 
 		//盒子阴影
 		if ($("#backgroundColor").val() == "") {
-			var q = "333333"
+			var q = "333333";
 		} else {
 			var q = $("#backgroundColor").val()
 		}

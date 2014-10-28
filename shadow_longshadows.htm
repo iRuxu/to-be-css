@@ -18,15 +18,39 @@
 <script src="longshadows/jquery-ui-1.10.3.custom.min.js"></script>
 <script src="longshadows/jquery.xcolor.min.js"></script>
 <script src="longshadows/longshadow.js"></script>
+<script src="javascripts/colpick.js"></script>
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="longshadows/longshadow.css">
 <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+<link rel="stylesheet" href="stylesheets/colpick.css">
 <script>
 	$(function(){
 	    $("h5").click(function() {
 	       	$("#about").fadeToggle('slow');
 	       	var h5_pos = $("h5").offset().top;
 	       	$(window).scrollTop(h5_pos);
+	    });
+	    $("#backgroundColor").colpick({
+	    	layout:'rgbhex',
+	    	submit:0,
+	    	colorScheme:'dark',
+	    	onChange:function(hsb,hex,rgb,el,bySetColor) {
+	    	$(el).css('border-color','#'+hex);
+	    	if(!bySetColor) $(el).val(hex);
+	    	}
+	    }).keyup(function(){
+	    	$(this).colpickSetColor(this.value);
+	    });
+	    $("#shapeColor").colpick({
+	    	layout:'rgbhex',
+	    	submit:0,
+	    	colorScheme:'dark',
+	    	onChange:function(hsb,hex,rgb,el,bySetColor) {
+	    	$(el).css('border-color','#'+hex);
+	    	if(!bySetColor) $(el).val(hex);
+	    	}
+	    }).keyup(function(){
+	    	$(this).colpickSetColor(this.value);
 	    });
 	})
 </script>
@@ -51,7 +75,7 @@
 
 	<div  id="settings">
 		<div  class="input-group background">
-			<label  class="color bg">#<input  type="text"  placeholder="333333"  id="backgroundColor"  maxlength="6"></label>
+			<label  class="color bg">#<input  type="text" placeholder="333333" id="backgroundColor" maxlength="6"></label>
 			<div  class="sliderWrap">
 				<strong>
 					盒子投影大小 
@@ -131,6 +155,7 @@
 	<h3>Long Shadows</h3>
 	我们知道可以通过阴影来制造立体效果，并且阴影属性box-shadow和text-shadow都可以有多个值，用逗号（，）分隔他们。 <br>
 	于是我们可以通过制造连串的阴影达到长投影的效果，用代码来替代PS的一些任务。 <br>
+	感谢Juani为我们制造了它，由于Google在中国被墙它原先的站无法这么正常使用，我修改了部分界面样式并添加了快速拾色，并对一系列CSS工具更为中文界面，让中文用户可以更方便的操作它。
 	它的核心源码如下：<br>
 	<div class="highlight highlight-js"><pre>    <span class="kd">function</span> <span class="nx">a</span><span class="p">()</span> <span class="p">{</span>
 
