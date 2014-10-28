@@ -12,10 +12,9 @@ table{border-collapse: collapse;border-spacing:0;}
 table td{border:1px solid #ddd;padding:2px 5px;font-size:12px;line-height: 24px;}
 
 header{border-bottom: 1px solid #888;position: relative;background:url(img/iruxu.png) no-repeat left center;}
-footer{border-top:1px solid #777;}
-header{padding:10px 20px;color:#fff;}
-header,h5{background-color:#222;}
-header a,h5 {color:#ccc;}
+footer{border-top:1px solid #777;min-height:48px;_height:48px;position: relative;}
+header,footer{padding:10px 20px;background-color:#222;color:#ccc;}
+header a,footer a {color:#ccc;}
 
 @-webkit-keyframes tada{
 0%{-webkit-transform:scale(1)}
@@ -28,7 +27,7 @@ header a,h5 {color:#ccc;}
 h1,h5{font-family:"Nikefont";-webkit-font-smoothing: antialiased;}
 h1{font-size:48px;padding:6px 0 6px 88px;display:inline-block;line-height:42px;text-shadow:2px 2px 2px #000;-webkit-transition:0.6s;transition:0.6s;color:#ddd;}
 h1:hover{color:#00ccff;-webkit-animation:tada 1s .2s ease both;-moz-animation:tada 1s .2s ease both;}
-h5{padding:20px;font-size:28px;line-height:38px;letter-spacing:1px;}
+h5{font-size:28px;line-height:48px;letter-spacing:1px;color:#ccc;}
 h5:hover{color:#00ccff;transition:1s;}
 .about-hr{border-bottom:1px dotted #777;}
 header ul{display:inline-block;position: absolute;left:280px;top:30px;}
@@ -41,9 +40,14 @@ header p a:hover{color:#00ccff;}
 header p{position:static;text-align:left;padding-left:90px;}
 header ul{display:none;}
 }
-
 .content{padding:20px;}
-.content>ul{float:left;display:inline;width:220px;margin-right:10px;overflow:hidden;}
+#about{padding:20px;color:#666;line-height: 24px;letter-spacing: 1px;width:80%;margin:0 auto;}
+h3{color:#333;font-size:28px;line-height: 32px;font-weight: bold;font-family: Calibri;}
+.hide{display: none;}
+
+
+
+/*.content>ul{float:left;display:inline;width:220px;margin-right:10px;overflow:hidden;}
 @media (max-width:1640px) and (min-width:1438px){.content>ul:nth-child(7){clear:left;}}
 @media (max-width:1430px) and (min-width:1200px){.content>ul:nth-child(6){clear:left;}}
 @media (max-width:1190px) and (min-width:962px){.content>ul:nth-child(5){clear:left;}}
@@ -79,4 +83,4 @@ h6{border-bottom: 1px dashed #fff;margin:0;padding:0;color:#00ccff;}
 	#box table{width:95%;margin:10px auto 28px auto;}
 }
 #box b{color:#ffff00;}
-#box strong{color:#ff0000;}
+#box strong{color:#ff0000;}*/

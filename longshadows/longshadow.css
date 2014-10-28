@@ -1,3 +1,7 @@
+.ls_main{height:680px;background:#333;}
+
+#authorinfo{position: absolute;top:24px;right:20px;}
+
 /*侧边栏布局*/
 #settings{
 	float:left;
@@ -62,15 +66,14 @@
     letter-spacing: 1px;
     text-transform: uppercase;
 
-    color: rgba(255,255,255,.3);
+    color: #777;
 }
 
-#settings .sliderWrap:hover strong,
-#settings .sliderWrap.active strong
-{
-    color: #ccc;
-    cursor:pointer;
+#settings .input-group:not(.disabled) .sliderWrap:hover strong, 
+#settings .input-group:not(.disabled) .sliderWrap.active strong {
+	color: #ccc;
 }
+
 
 #settings .sliderWrap label
 {
@@ -311,7 +314,7 @@
 	color:#00ccff;
 }
 
-.ls_main{height:680px;background:#333;}
+
 #result
 {
     display: block;
@@ -464,11 +467,14 @@
     cursor: pointer;
     text-align: center;
     text-transform: uppercase;
+    transition:0.5s;
 
     
 }#code-wrapper .close:hover
 {
     text-shadow:0px 0px 1px #00ccff;
+    color:#ffff00;
+
 }#code-wrapper .close:after
 {
     font-size: 34px;
@@ -486,36 +492,6 @@
     color: #00ccff;
 }
 
-
-/*Author info*/
-#by
-{
-    font-size: 11px;
-
-    position: fixed;
-    z-index: 200;
-    right: 30px;
-    bottom: 30px;
-
-    display: block;
-
-    padding: 5px 10px;
-
-    text-decoration: none;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-
-    color: rgba(255,255,255,.5);
-    border-radius: 2px;
-    background: #2c3e50;
-    box-shadow: 0 1px rgba(0,0,0,.3);
-}#by strong
-{
-    color: #fff;
-}#by:hover
-{
-    background: #c0392b;
-}
 
 /*jQ UI CSS*/
 
@@ -634,7 +610,6 @@
 
     color: #fff;
     background: #00ccff;
-    /*box-shadow: inset 0 1px rgba(255,255,255,.10);*/
     box-shadow: 0px 0px 6px #00ccff;
 }.ui-widget-header a
 {

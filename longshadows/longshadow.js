@@ -1,8 +1,10 @@
 $(document).ready(function() {
 
 	function a() {
+
+		//盒子阴影
 		if ($("#backgroundColor").val() == "") {
-			var q = "222D3A"
+			var q = "333333"
 		} else {
 			var q = $("#backgroundColor").val()
 		}
@@ -44,9 +46,10 @@ $(document).ready(function() {
 		})
 	}
 
+	//文字阴影
 	function c() {
 		if ($("#shapeColor").val() == "") {
-			var q = "16a085"
+			var q = "00ccff"
 		} else {
 			var q = $("#shapeColor").val()
 		}
@@ -88,6 +91,7 @@ $(document).ready(function() {
 		})
 	}
 
+	//复制设置
 	function b(f) {
 		var h = document,
 			i = h.getElementById(f),
@@ -108,6 +112,8 @@ $(document).ready(function() {
 	}
 	a();
 	c();
+
+	//滑杆设置
 	$("#shadowSizeSlider").slider({
 		range: "min",
 		min: 0,
@@ -204,6 +210,8 @@ $(document).ready(function() {
 			$(this).closest(".sliderWrap").removeClass("active")
 		}
 	});
+
+	//只做文字效果
 	$(".text-only").bind("click", function() {
 		$("#shape").toggleClass("only");
 		$(".input-group.background input").attr("disabled", "disabled");
@@ -239,6 +247,8 @@ $(document).ready(function() {
 			$(this).toggleClass("active")
 		}
 	});
+
+	//input控制
 	$("input").each(function() {
 		var d = $(this).attr("id");
 		$(this).keypress(function(f) {
@@ -283,6 +293,8 @@ $(document).ready(function() {
 			c()
 		})
 	});
+
+	//显示代码
 	$("#showCode").bind("click", function() {
 		$("#code-wrapper").fadeIn();
 		var i = $("#shape").attr("style");
@@ -293,9 +305,9 @@ $(document).ready(function() {
 		} else {
 			var d = $("#backgroundColor").val()
 		} if ($(".text-only").hasClass("active")) {
-			var f = "/* you do realize this makes no sense, right?\ndon't use this.\nhttp://www.youtube.com/watch?v=umDr0mPuyQc */\n.shape {\n  " + h + "height: 100%;\n  width: 100%;\n  font-size: 75px;\n  text-align: center;\n}"
+			var f = ".shape {\n  " + h + "height: 100%;\n  width: 100%;\n  font-size: 75px;\n  text-align: center;\n}"
 		} else {
-			var f = "/* you do realize this makes no sense, right?\ndon't use this.\nhttp://www.youtube.com/watch?v=umDr0mPuyQc */\n.container {\n  padding: 100px;\n  background: #" + d + ";\n}\n.shape {\n  " + h + "height: 150px;\n  width: 150px;\n  font-size: 75px;\n  line-height: 150px;\n  text-align: center;\n}"
+			var f = ".container {\n  padding: 100px;\n  background: #" + d + ";\n}\n.shape {\n  " + h + "height: 150px;\n  width: 150px;\n  font-size: 75px;\n  line-height: 150px;\n  text-align: center;\n}"
 		}
 		$("#code pre").html("");
 		$("#code pre").append(f)
@@ -308,6 +320,8 @@ $(document).ready(function() {
 	$("#code-wrapper .background, #code-wrapper .close").bind("click", function() {
 		$("#code-wrapper").fadeOut()
 	});
+
+	//当前激活样式
 	$("label.color").each(function() {
 		$(this).children().focus(function() {
 			$(this).parent().addClass("active")
@@ -316,6 +330,8 @@ $(document).ready(function() {
 			$(this).parent().removeClass("active")
 		})
 	});
+
+	//全选
 	$("#selectAll").bind("click", function() {
 		b("tocopy")
 	})
