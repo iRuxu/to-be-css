@@ -15,26 +15,8 @@
 <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
 <![endif]-->
 <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
-
 <link rel="stylesheet" href="style.css">
-<script>
-	$(function(){
-	    $("h5").click(function() {
-	       	$("#about").fadeToggle('slow');
-	       	var h5_pos = $("h5").offset().top;
-	       	$(window).scrollTop(h5_pos);
-	    });
-	    $("#tbc_index>li").hover(
-	    	function(){
-	    		$('#tbc_index>li').css({'filter':'alpha(opacity=60)','opacity':0.2});
-	    		$(this).css({'filter':'alpha(opacity=100)','opacity':1});
-	    	},
-	    	function(){
-	    		$('#tbc_index>li').css({'filter':'alpha(opacity=100)','opacity':100});
-	    	}
-	    )
-	})
-</script>
+<script src="tobecss.js"></script>
 </head>
 
 <body>
@@ -42,8 +24,24 @@
 	<a href="./" target="_self"><h1 title="iRuxu's CSS TOOLS">TO BE CSS</h1></a>
   <div id="nav">
 	<ul>
-		<h2><a href="shadow_longshadows.htm" target="_self">Long Shadow</a></h2>
-		<h2>Triangle</h2>
+		<li><h2><a href="shadow_longshadows.html" target="_self">Long Shadow</a></h2></li>
+		<li><h2><a href="shadow_dropshadows.html" target="_self">Drop shadow</a></h2></li>
+		<li><h2><a href="shadow_3dtext.html" target="_self">3D TEXT</a></h2></li>
+		<li><h2><a href="border_radius.html" target="_self">Radius</a></h2></li>
+		<li><h2><a href="border_triangle.html" target="_self">Triangle</a></h2></li>
+		<li><h2><a href="border_arrow.html" target="_self">Arrow</a></h2></li>
+		<li><h2><a href="border_ribbon.html" target="_self">Ribbon</a></h2></li>
+		<li><h2><a href="border_borderimage.html" target="_self">Border Image</a></h2></li>
+		<li id="gradient_nav"><h2><a href="gradient.html" target="_self">Gradient</a></h2>
+			<ul style="display:none">
+			<li><a href="gradient_background.html" target="_self">Gradient Background</a></li>
+			<li><a href="gradient_button.html" target="_self">Gradient Button</a></li>
+			<li><a href="gradient_line.html" target="_self">Gradient Line</a></li>
+			<li><a href="gradient_font.html" target="_self">Gradient Font</a></li>
+			</ul>
+		</li>
+		<li><h2><a href="animate.html" target="_self">Animate</a></h2></li>
+		<li><h2><a href="http://iruxu.com/notebook" target="_self">NoteBook</a></h2></li>
 	</ul>
   </div>
 	<p>
@@ -54,28 +52,34 @@
 </header>
 <div id="main" class="index_main clearfix">
 	<a href="http://iruxu.com/to-be-css" target="_self" title="http://iruxu.com/to-be-css"><h1>To Be CSS</h1></a>
-	<p>快速创建CSS样式、可视化界面，让你的工作效率更高</p>
+	<p>可视化界面快速创建CSS样式、CSS工具锦集、让你的工作效率更高</p>
 
 	<ul id="tbc_index">
-		<li id="tbc1"><a href="shadow_longshadows.htm" target="_self">LS</a><span><b>长投影</b>Long Shadows</span></li>
-		<li id="tbc2"><a href=""></a></li>
-		<li id="tbc3"><a href=""></a></li>
-		<li id="tbc4"><a href=""></a></li>
-		<li id="tbc5"><a href=""></a></li>
-		<li id="tbc6"><a href=""></a></li>
-		<li id="tbc7"><a href="font_fontfamily.html" target="_self"></a><span><b>字体预览</b>Font Family</span></li>
-		<li id="tbc8"><a href=""></a></li>
-		<li id="tbc9"><a href=""></a></li>
-		<li id="tbc10"><a href=""></a></li>
-		<li id="tbc11"><a href=""></a></li>
-		<li id="tbc12"><a href=""></a></li>
+		<li id="tbc1"><a href="shadow_longshadows.html" target="_self">LS</a><span><b>长投影</b>Long Shadows</span></li>
+		<li id="tbc2"><a href="shadow_dropshadows.html" target="_self"></a><span><b>倒影</b>Drop Shadows</span></li>
+		<li id="tbc3"><a href="shadow_3dtext.html" target="_self"></a><span><b>立体文字</b>3D Text</span></li>
+		<li id="tbc4"><a href="border_radius.html" target="_self"></a><span><b>魔术圆角</b>Border Radius</span></li>
+		<li id="tbc5"><a href="border_triangle.html" target="_self"></a><span><b>三角形</b>Triangle Build</span></li>
+		<li id="tbc6"><a href="border_arrow.html" target="_self"></a><span><b>箭头</b>Arrow Tips</span></li>
+
+		<li id="tbc7"><a href="border_ribbon.html" target="_self"></a><span><b>色带</b>Ribbon</span></li>
+		<li id="tbc8"><a href="border_borderimage.html" target="_self"></a><span><b>边框图片</b>Border Image</span></li>
+		<li id="tbc9"><a href="gradient.html" target="_self"></a><span><b>渐变万花筒</b>Gradient</span></li>
+		<li id="tbc10"><a href="animate.html" target="_self"></a><span><b>动画工厂</b>Animate</span></li>
+		<li id="tbc11"><a href="font_fontfamily.html" target="_self"></a><span><b>字体预览</b>Font Family</span></li>
+		<li id="tbc12"><a href="http://www.fontsquirrel.com/tools/webfont-generator"><span><b>字体格式转换</b>Fonts Quirrel</span></a></li>
+
+		<li id="tbc13"><a href="http://www.css3maker.com/index.html"><span><b>CSS生成</b>CSS3 Maker</span></a></li>
+		<li id="tbc14"><a href="http://spritepad.wearekiss.com"><span><b>雪碧图</b>CSS Sprite</span></a></li>
+		<li id="tbc15"><a href="http://tool.oschina.net/encrypt?type=4"><span><b>图片BASE64</b>BASE64</span></a></li>
+		<li id="tbc16"><a href="http://www.peise.net/tools/web/"><span><b>在线配色</b>Color Scheme</span></a></li>
+		<li id="tbc17"><a href="http://screensiz.es/phone"><span><b>屏幕尺寸</b>Screen Size</span></a></li>
+		<li id="tbc18"><a href="http://iruxu.com/notebook"><span><b>笔记本</b>Notebook</span></a></li>
 	</ul>
-	
-	
 </div>
 <footer>
 	<h5>EASILY CREATE CSS</h5>
-	<p id="authorinfo"><strong>To Be CSS</strong> - <a href="http://iruxu.com" target="_blank" >iRuxu</a></p>
+	<p id="authorinfo"><strong><a href="http://iruxu.com/to-be-css">To Be CSS</a></strong> - <a href="http://weibo.com/yuanzi0512" target="_blank" >iRuxu</a></p>
 </footer> 
 <div style="display:none"><script src="http://s6.cnzz.com/z_stat.php?id=1253473928&web_id=1253473928" language="JavaScript"></script></div>
 </body>

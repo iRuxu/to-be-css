@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<title>To be CSS - iRuxu.com</title>
+<meta charset="utf-8"/>
+<meta name="keywords" content="css,to be css,iruxu" />
+<meta name="description" content="A tool for creat CSS3 quickly" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="renderer" content="webkit">
+<meta http-equiv="Cache-Control" content="no-transform"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<link rel="icon" type="image/x-icon" href="img/favicon.ico">
+<base target="_blank">
+<!--[if lt IE 9]>
+<script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+<![endif]-->
+<script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+<script src="longshadows/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="longshadows/jquery.xcolor.min.js"></script>
+<script src="longshadows/longshadow.js"></script>
+<script src="javascripts/colpick.js"></script>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="longshadows/longshadow.css">
+<link rel="stylesheet" href="stylesheets/pygment_trac.css">
+<link rel="stylesheet" href="stylesheets/colpick.css">
+<script src="tobecss.js"></script>
+</head>
+
+<body>
+<header>
+	<a href="./" target="_self"><h1 title="iRuxu's CSS TOOLS">TO BE CSS</h1></a>
+  <div id="nav">
+	<ul>
+		<li><h2 class="ctcat"><a href="shadow_longshadows.html" target="_self">Long Shadow</a></h2></li>
+		<li><h2><a href="shadow_dropshadows.html" target="_self">Drop shadow</a></h2></li>
+		<li><h2><a href="shadow_3dtext.html" target="_self">3D TEXT</a></h2></li>
+		<li><h2><a href="border_radius.html" target="_self">Radius</a></h2></li>
+		<li><h2><a href="border_triangle.html" target="_self">Triangle</a></h2></li>
+		<li><h2><a href="border_arrow.html" target="_self">Arrow</a></h2></li>
+		<li><h2><a href="border_ribbon.html" target="_self">Ribbon</a></h2></li>
+		<li><h2><a href="border_borderimage.html" target="_self">Border Image</a></h2></li>
+		<li id="gradient_nav"><h2><a href="gradient.html" target="_self">Gradient</a></h2>
+			<ul style="display:none">
+			<li><a href="gradient_background.html" target="_self">Gradient Background</a></li>
+			<li><a href="gradient_button.html" target="_self">Gradient Button</a></li>
+			<li><a href="gradient_line.html" target="_self">Gradient Line</a></li>
+			<li><a href="gradient_font.html" target="_self">Gradient Font</a></li>
+			</ul>
+		</li>
+		<li><h2><a href="animate.html" target="_self">Animate</a></h2></li>
+		<li><h2><a href="http://iruxu.com/notebook" target="_self">NoteBook</a></h2></li>
+	</ul>
+  </div>
+	<p>
+		<a href="http://iruxu.com">[ 最新 ]</a> 
+		<span style="background:#fff;border-radius:8px;padding:0 10px"><a href="http://weibo.com/yuanzi0512"><img src="img/sina.png" width="12px" alt="iruxu的微博" title="Follow me on 微博"></a> <a href="mailto:17229398@qq.com"><img src="img/email.png" width="12px" alt="iruxu的电子邮件" title="email:17229398@qq.com"></a></span>
+		<br><a href="http://iruxu.com/to-be-css">http://iruxu.com/to-be-css</a>
+	</p>	
+</header>
+<div id="main" class="ls_main clearfix">
+
+	<div  id="settings">
+		<div  class="input-group background">
+			<label  class="color bg">#<input  type="text" placeholder="333333" id="backgroundColor" maxlength="6"></label>
+			<div  class="sliderWrap">
+				<strong>
+					盒子投影大小 
+					<label><input  type="text"  readonly=""  placeholder="Shadow size"  value="100"  id="shadowSize"  maxlength="6">px</label>
+				</strong>
+				<div id="shadowSizeSlider"  class="slider" title="box shadow size"></div>
+				
+			</div>
+			<div  class="sliderWrap">
+				<strong>
+					盒子投影透明度
+					<label><input  type="text"  readonly=""  placeholder="Shadow opacity"  value="10"  id="shadowAlpha"  maxlength="3">%</label>
+				</strong>
+				<div  id="shadowAlphaSlider"  class="slider" title="box shadow opacity"></div>
+				
+			</div>
+			<div  class="sliderWrap">
+				<strong>
+					盒子投影过渡
+					<label><input  type="text"  readonly=""  placeholder="Fade start"  value="60"  id="fadeStart"  maxlength="3">%</label>
+				</strong>
+				<div  id="fadeStartSlider"  class="slider" title="box fade strength"></div>
+				
+			</div>
+		</div>
+		
+		<div  class="input-group text">
+			<label  class="color sh">#<input  type="text"  placeholder="00ccff"  id="shapeColor"  maxlength="6"></label>
+			<div  class="sliderWrap">
+				<strong>
+					文字投影大小
+					<label><input  type="text"  readonly=""  placeholder="Text Shadow size"  value="30"  id="textShadowSize"  maxlength="6">px</label>
+				</strong>
+				<div id="textShadowSizeSlider"  class="slider" title="Text shadow size"></div>
+				
+			</div>
+			<div  class="sliderWrap">
+				<strong>
+					文字投影透明度
+					<label><input  type="text"  readonly=""  placeholder="Text opacity"  value="10"  id="textAlpha"  maxlength="3">%</label>
+				</strong>
+				<div  id="textAlphaSlider"  class="slider" title="Text shadow opacity"></div>
+				
+			</div>
+			<div  class="sliderWrap">
+				<strong>
+					文字投影过渡
+					<label><input  type="text"  readonly=""  placeholder="Fade text start"  value="60"  id="fadeTextStart"  maxlength="3">%</label>
+				</strong>
+				<div  id="fadeTextStartSlider"  class="slider" title="Text fade strength"></div>
+				
+			</div>
+			<span  class="text-only" title="Text only" >只做文字效果</span>
+		</div>
+		<div id="showCode">TO BE CSS</div>
+	</div>
+	<div  id="result" class="clearfix">
+		<div  id="shape"  class="iluminate"><span>Ls</span></div>
+	</div>
+	<div  id="code-wrapper">
+		<div  class="background"></div>
+		<span  class="close">关闭</span>
+		<div  id="code">
+			<span  id="selectAll">全选</span>
+			<pre  id="tocopy"></pre>
+		</div>
+	</div>
+	
+	
+</div>
+<footer>
+	<h5 title="Toggle the description">+ ABOUT THIS</h5>
+	<p id="authorinfo"><strong>Long Shadows Generator</strong> by <a href="http://twitter.com/heyimjuani"  target="_blank" >Juani</a> / Modifed <a href="http://iruxu.com" target="_blank" >iRuxu</a></p>
+</footer> 
+<div id="about" name="about" style="display:none">
+
+	<h3>Long Shadows</h3>
+	我们知道可以通过阴影来制造立体效果，并且阴影属性box-shadow和text-shadow都可以有多个值，用逗号（，）分隔他们。 <br>
+	于是我们可以通过制造连串的阴影达到长投影的效果，用代码来替代PS的一些任务。 <br>
+	感谢<a href="http://twitter.com/heyimjuani">Juani</a>为我们制造了它，由于Google在中国被墙它原先的站无法这么正常使用，我修改了部分界面样式并添加了快速拾色，并将它加入了我的TO BE CSS工具箱。<br>
+	我将它们修改成了中文界面，旨在让初学的中文用户可以更方便的操作它。—— <a href="http://weibo.com/yuanzi0512">iRuxu</a><br>
+	它的核心源码如下：<br>
+	<div class="highlight highlight-js"><pre>    <span class="kd">function</span> <span class="nx">a</span><span class="p">()</span> <span class="p">{</span>
+
+	        <span class="c1">//盒子阴影</span>
+	        <span class="k">if</span> <span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s2">"#backgroundColor"</span><span class="p">).</span><span class="nx">val</span><span class="p">()</span> <span class="o">==</span> <span class="s2">""</span><span class="p">)</span> <span class="p">{</span>
+	            <span class="kd">var</span> <span class="nx">q</span> <span class="o">=</span> <span class="s2">"333333"</span>
+	        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+	            <span class="kd">var</span> <span class="nx">q</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s2">"#backgroundColor"</span><span class="p">).</span><span class="nx">val</span><span class="p">()</span>
+	        <span class="p">}</span>
+	        <span class="nx">$</span><span class="p">(</span><span class="s2">"#result"</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s2">"background-color"</span><span class="p">,</span> <span class="nx">q</span><span class="p">);</span>
+	        <span class="k">if</span> <span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s2">"#shadowSize"</span><span class="p">).</span><span class="nx">val</span><span class="p">()</span> <span class="o">==</span> <span class="s2">""</span><span class="p">)</span> <span class="p">{</span>
+	            <span class="kd">var</span> <span class="nx">f</span> <span class="o">=</span> <span class="mi">100</span>
+	        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+	            <span class="kd">var</span> <span class="nx">f</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s2">"#shadowSize"</span><span class="p">).</span><span class="nx">val</span><span class="p">()</span>
+	        <span class="p">}</span> <span class="k">if</span> <span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s2">"#fadeStart"</span><span class="p">).</span><span class="nx">val</span><span class="p">()</span> <span class="o">==</span> <span class="s2">""</span><span class="p">)</span> <span class="p">{</span>
+	            <span class="kd">var</span> <span class="nx">p</span> <span class="o">=</span> <span class="mi">60</span> <span class="o">/</span> <span class="mi">100</span>
+	        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+	            <span class="kd">var</span> <span class="nx">p</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s2">"#fadeStart"</span><span class="p">).</span><span class="nx">val</span><span class="p">()</span> <span class="o">/</span> <span class="mi">100</span>
+	        <span class="p">}</span> <span class="k">if</span> <span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s2">"#shadowAlpha"</span><span class="p">).</span><span class="nx">val</span><span class="p">()</span> <span class="o">==</span> <span class="s2">""</span><span class="p">)</span> <span class="p">{</span>
+	            <span class="kd">var</span> <span class="nx">n</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">/</span> <span class="mi">100</span>
+	        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+	            <span class="kd">var</span> <span class="nx">n</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s2">"#shadowAlpha"</span><span class="p">).</span><span class="nx">val</span><span class="p">()</span> <span class="o">/</span> <span class="mi">100</span>
+	        <span class="p">}</span>
+	        <span class="kd">var</span> <span class="nx">o</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">xcolor</span><span class="p">.</span><span class="nx">opacity</span><span class="p">(</span><span class="s2">"#"</span> <span class="o">+</span> <span class="nx">q</span><span class="p">,</span> <span class="s2">"black"</span><span class="p">,</span> <span class="nx">n</span><span class="p">);</span>
+	        <span class="kd">var</span> <span class="nx">h</span> <span class="o">=</span> <span class="p">[];</span>
+	        <span class="kd">var</span> <span class="nx">g</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">ceil</span><span class="p">(</span><span class="nx">f</span> <span class="o">*</span> <span class="nx">p</span><span class="p">);</span>
+	        <span class="k">if</span> <span class="p">(</span><span class="nx">n</span> <span class="o">&lt;</span> <span class="mf">0.01</span><span class="p">)</span> <span class="p">{</span>
+	            <span class="nx">f</span> <span class="o">=</span> <span class="mi">0</span>
+	        <span class="p">}</span>
+	        <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">f</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+	            <span class="kd">var</span> <span class="nx">m</span> <span class="o">=</span> <span class="nx">f</span> <span class="o">-</span> <span class="nx">j</span><span class="p">;</span>
+	            <span class="kd">var</span> <span class="nx">l</span> <span class="o">=</span> <span class="nx">f</span> <span class="o">-</span> <span class="nx">j</span><span class="p">;</span>
+	            <span class="kd">var</span> <span class="nx">r</span> <span class="o">=</span> <span class="nx">m</span> <span class="o">+</span> <span class="s2">"px "</span> <span class="o">+</span> <span class="nx">l</span> <span class="o">+</span> <span class="s2">"px "</span><span class="p">;</span>
+	            <span class="k">if</span> <span class="p">(</span><span class="nx">j</span> <span class="o">&lt;=</span> <span class="nx">g</span> <span class="o">&amp;&amp;</span> <span class="nx">p</span> <span class="o">&gt;</span> <span class="mf">0.01</span><span class="p">)</span> <span class="p">{</span>
+	                <span class="kd">var</span> <span class="nx">k</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">xcolor</span><span class="p">.</span><span class="nx">gradientlevel</span><span class="p">(</span><span class="nx">o</span><span class="p">,</span> <span class="nx">q</span><span class="p">,</span> <span class="nx">g</span> <span class="o">-</span> <span class="nx">j</span><span class="p">,</span> <span class="nx">g</span><span class="p">);</span>
+	                <span class="nx">r</span> <span class="o">+=</span> <span class="nx">k</span>
+	            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+	                <span class="nx">r</span> <span class="o">+=</span> <span class="nx">o</span>
+	            <span class="p">}</span>
+	            <span class="nx">h</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">r</span><span class="p">)</span>
+	        <span class="p">}</span>
+	        <span class="kd">var</span> <span class="nx">d</span> <span class="o">=</span> <span class="nx">h</span><span class="p">.</span><span class="nx">reverse</span><span class="p">().</span><span class="nx">join</span><span class="p">();</span>
+	        <span class="nx">$</span><span class="p">(</span><span class="s2">"#shape"</span><span class="p">).</span><span class="nx">css</span><span class="p">({</span>
+	            <span class="s2">"box-shadow"</span><span class="o">:</span> <span class="nx">d</span>
+	        <span class="p">})</span>
+	    <span class="p">}</span>
+
+	    <span class="c1">//文字阴影</span>
+	    <span class="kd">function</span> <span class="nx">c</span><span class="p">()</span> <span class="p">{</span>
+	        <span class="k">if</span> <span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s2">"#shapeColor"</span><span class="p">).</span><span class="nx">val</span><span class="p">()</span> <span class="o">==</span> <span class="s2">""</span><span class="p">)</span> <span class="p">{</span>
+	            <span class="kd">var</span> <span class="nx">q</span> <span class="o">=</span> <span class="s2">"00ccff"</span>
+	        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+	            <span class="kd">var</span> <span class="nx">q</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s2">"#shapeColor"</span><span class="p">).</span><span class="nx">val</span><span class="p">()</span>
+	        <span class="p">}</span>
+	        <span class="nx">$</span><span class="p">(</span><span class="s2">"#shape"</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s2">"background-color"</span><span class="p">,</span> <span class="nx">q</span><span class="p">);</span>
+	        <span class="k">if</span> <span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s2">"#textShadowSize"</span><span class="p">).</span><span class="nx">val</span><span class="p">()</span> <span class="o">==</span> <span class="s2">""</span><span class="p">)</span> <span class="p">{</span>
+	            <span class="kd">var</span> <span class="nx">f</span> <span class="o">=</span> <span class="mi">30</span>
+	        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+	            <span class="kd">var</span> <span class="nx">f</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s2">"#textShadowSize"</span><span class="p">).</span><span class="nx">val</span><span class="p">()</span>
+	        <span class="p">}</span> <span class="k">if</span> <span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s2">"#fadeTextStart"</span><span class="p">).</span><span class="nx">val</span><span class="p">()</span> <span class="o">==</span> <span class="s2">""</span><span class="p">)</span> <span class="p">{</span>
+	            <span class="kd">var</span> <span class="nx">d</span> <span class="o">=</span> <span class="mi">60</span> <span class="o">/</span> <span class="mi">100</span>
+	        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+	            <span class="kd">var</span> <span class="nx">d</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s2">"#fadeTextStart"</span><span class="p">).</span><span class="nx">val</span><span class="p">()</span> <span class="o">/</span> <span class="mi">100</span>
+	        <span class="p">}</span> <span class="k">if</span> <span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="s2">"#textAlpha"</span><span class="p">).</span><span class="nx">val</span><span class="p">()</span> <span class="o">==</span> <span class="s2">""</span><span class="p">)</span> <span class="p">{</span>
+	            <span class="kd">var</span> <span class="nx">r</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">/</span> <span class="mi">100</span>
+	        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+	            <span class="kd">var</span> <span class="nx">r</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s2">"#textAlpha"</span><span class="p">).</span><span class="nx">val</span><span class="p">()</span> <span class="o">/</span> <span class="mi">100</span>
+	        <span class="p">}</span>
+	        <span class="kd">var</span> <span class="nx">o</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">xcolor</span><span class="p">.</span><span class="nx">opacity</span><span class="p">(</span><span class="s2">"#"</span> <span class="o">+</span> <span class="nx">q</span><span class="p">,</span> <span class="s2">"black"</span><span class="p">,</span> <span class="nx">r</span><span class="p">);</span>
+	        <span class="kd">var</span> <span class="nx">g</span> <span class="o">=</span> <span class="p">[];</span>
+	        <span class="kd">var</span> <span class="nx">m</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">ceil</span><span class="p">(</span><span class="nx">f</span> <span class="o">*</span> <span class="nx">d</span><span class="p">);</span>
+	        <span class="k">if</span> <span class="p">(</span><span class="nx">r</span> <span class="o">&lt;</span> <span class="mf">0.01</span><span class="p">)</span> <span class="p">{</span>
+	            <span class="nx">f</span> <span class="o">=</span> <span class="mi">0</span>
+	        <span class="p">}</span>
+	        <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">f</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+	            <span class="kd">var</span> <span class="nx">l</span> <span class="o">=</span> <span class="nx">f</span> <span class="o">-</span> <span class="nx">j</span><span class="p">;</span>
+	            <span class="kd">var</span> <span class="nx">h</span> <span class="o">=</span> <span class="nx">f</span> <span class="o">-</span> <span class="nx">j</span><span class="p">;</span>
+	            <span class="kd">var</span> <span class="nx">p</span> <span class="o">=</span> <span class="nx">l</span> <span class="o">+</span> <span class="s2">"px "</span> <span class="o">+</span> <span class="nx">h</span> <span class="o">+</span> <span class="s2">"px "</span><span class="p">;</span>
+	            <span class="k">if</span> <span class="p">(</span><span class="nx">j</span> <span class="o">&lt;=</span> <span class="nx">m</span> <span class="o">&amp;&amp;</span> <span class="nx">d</span> <span class="o">&gt;</span> <span class="mf">0.01</span><span class="p">)</span> <span class="p">{</span>
+	                <span class="kd">var</span> <span class="nx">k</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">xcolor</span><span class="p">.</span><span class="nx">gradientlevel</span><span class="p">(</span><span class="nx">o</span><span class="p">,</span> <span class="nx">q</span><span class="p">,</span> <span class="nx">m</span> <span class="o">-</span> <span class="nx">j</span><span class="p">,</span> <span class="nx">m</span><span class="p">);</span>
+	                <span class="nx">p</span> <span class="o">+=</span> <span class="nx">k</span>
+	            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+	                <span class="nx">p</span> <span class="o">+=</span> <span class="nx">o</span>
+	            <span class="p">}</span>
+	            <span class="nx">g</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">p</span><span class="p">)</span>
+	        <span class="p">}</span>
+	        <span class="kd">var</span> <span class="nx">n</span> <span class="o">=</span> <span class="nx">g</span><span class="p">.</span><span class="nx">reverse</span><span class="p">().</span><span class="nx">join</span><span class="p">();</span>
+	        <span class="nx">$</span><span class="p">(</span><span class="s2">"#shape"</span><span class="p">).</span><span class="nx">css</span><span class="p">({</span>
+	            <span class="s2">"text-shadow"</span><span class="o">:</span> <span class="nx">n</span>
+	        <span class="p">})</span>
+	    <span class="p">}</span>
+	</pre></div>
+</div>
+<div style="display:none"><script src="http://s6.cnzz.com/z_stat.php?id=1253473928&web_id=1253473928" language="JavaScript"></script></div>
+</body>
+</html>
+	
