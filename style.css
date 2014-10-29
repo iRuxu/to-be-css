@@ -40,7 +40,7 @@ h2:hover,.ctcat{color:#00ccff;background:#181818;border:1px solid #00ccff;border
 h2:hover a,.ctcat a{color:#00ccff;}
 #gradient_nav{position: relative;}
 #gradient_nav ul{position: absolute;top:43px;left:0;}
-#nav>ul>li>ul{z-index:999;width:288px;background:rgba(0,0,0,0.88);border:solid 1px #000000;border-top:none;box-shadow:2px 2px 4px #ccc;
+#gradient_nav ul{z-index:999;width:288px;background:#222;border:solid 1px #000000;
 	border-top-left-radius:0px;
 	border-top-right-radius:0px;
 	border-bottom-left-radius:8px;
