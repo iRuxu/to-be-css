@@ -17,44 +17,11 @@ $(function(){
       function(){$(this).children('ul').hide('slow')}
     )
 
-    //longshadows
+    //about
     $("h5").click(function() {
         $("#about").fadeToggle('slow');
         var h5_pos = $("h5").offset().top;
         $(window).scrollTop(h5_pos);
     });
-
-    $("#backgroundColor").colpick({
-      layout:'rgbhex',
-      submit:0,
-      colorScheme:'dark',
-      onChange:function(hsb,hex,rgb,el,bySetColor) {
-      $(el).css('border-color','#'+hex);
-      if(!bySetColor) $(el).val(hex);
-      }
-    }).keyup(function(){
-      $(this).colpickSetColor(this.value);
-    });
-
-    $("#shapeColor").colpick({
-      layout:'rgbhex',
-      submit:0,
-      colorScheme:'dark',
-      onChange:function(hsb,hex,rgb,el,bySetColor) {
-      $(el).css('border-color','#'+hex);
-      if(!bySetColor) $(el).val(hex);
-      }
-    }).keyup(function(){
-      $(this).colpickSetColor(this.value);
-    });
-    
-
-    
-
-
-    
-    
-    
-
 
 })
