@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<!-- saved from url=(0025)http://www.3dcsstext.com/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta  name="keywords"  content="3D CSS Text Generator, 3D CSS Text,css 3d generator, 3d css text shadow, 3d css font, 3d css generator, 3d text css generator, text-shadow generator, text-shadow, multiple text-shadows, 3d icon generator, 3d icons, cool css">
+  <meta  name="description"  content="The 3D CSS Text Generator creates 3D Text and Icons using only CSS for your web design projects.">
+    <title>3D CSS Text Generator</title>
+
+
+<link  type="text/css"  href="./3Dtext_files/style.css"  rel="stylesheet">
+<script  type="text/javascript"  async=""  src="./3Dtext_files/ga.js"></script><script  type="text/javascript"  src="./3Dtext_files/jquery-1.4.4.min.js"></script>
+<script  type="text/javascript"  src="./3Dtext_files/jquery-ui-1.8.7.custom.min.js"></script>
+<link  rel="stylesheet"  href="./3Dtext_files/colorpicker.css"  type="text/css">
+<script  type="text/javascript"  src="./3Dtext_files/colorpicker.js"></script>
+<link  type="text/css"  href="./3Dtext_files/jquery-ui-1.8.7.custom.css"  rel="stylesheet">
+<script  type="text/javascript"  src="./3Dtext_files/init-2.js"></script>
+
+</head>
+
+<body  data-twttr-rendered="true"  style="background-color: rgb(173, 3, 3);">
+<div  id="wrapper">
+<div  id="gradient"  style="background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, from(transparent), to(rgb(0, 0, 0)));"></div>
+<div  id="editor">
+  <h1  contenteditable="true"  class="3DText"  style="color: rgb(255, 255, 255); font-size: 134px; font-family: Garamond, serif; padding-bottom: 0px; text-shadow: rgb(231, 231, 231) 0px 0px 0px, rgb(216, 216, 216) 1px 1px 0px, rgb(202, 202, 202) 2px 2px 0px, rgb(187, 187, 187) 3px 3px 0px, rgb(173, 173, 173) 4px 4px 0px, rgb(158, 158, 158) 5px 5px 0px, rgb(144, 144, 144) 6px 6px 0px, rgba(0, 0, 0, 0.6) 7px 7px 6px, rgba(0, 0, 0, 0.498039) 7px 7px 1px, rgba(0, 0, 0, 0.2) 0px 0px 6px; font-weight: bold; font-style: normal; text-decoration: none;">3D CSS Text</h1>
+</div>
+<div  id="tagline">
+<h2> The 3D CSS text generator uses the sensational power of text-shadow to create thrilling<br> text and icons that almost reach out and grab you through the magic of The 3rd Dimension! </h2>
+  <h3>Works in the latest builds of Firefox, Chrome, Safari, Opera and now IE10!</h3>
+  <h3>Highlight the text to edit.</h3>
+
+</div>
+<div  class="throbber"  style="display: none;"></div>
+<div  id="controls"  class="ui-draggable"  style="left: 701.5px; display: block;">
+  <div  class="handle move"><a  name="move"  class="move iconic"></a></div>
+  <div  class="handle collapser minimize"><a  name="minus"  class="iconic"  title="minimize">-</a></div>
+  <div  class="handle reset hilighted"><a  name="spin"  class="spin iconic"  title="reset"></a></div>
+  <span  class="hide"  id="resetMessage">Reset</span>
+  <div  id="controlsInner">
+    <div  id="controlsInner2">
+      <div  class="control floatLeft">
+        <label  for="font">Font</label>
+        <br>
+        <select  style="width:100px;"  id="font">
+          <optgroup  label="Web Safe Fonts">
+          <option  value="1">Arial</option>
+          <option  value="2">Arial Black</option>
+          <option  value="3">Bookman</option>
+          <option  value="4">Comic Sans</option>
+          <option  value="5">Courier</option>
+          <option  value="6">Garamond</option>
+          <option  value="7">Geneva</option>
+          <option  value="8">Georgia</option>
+          <option  selected="selected"  value="9">Helvetica</option>
+          <option  value="10">Tahoma</option>
+          <option  value="11">Times</option>
+          <option  value="12">Verdana</option>
+          </optgroup>
+		   <optgroup  label="Icons">
+	          <option  value="0">Iconic Icons</option>
+	          </optgroup>
+        </select>
+        <br>
+        <input  type="checkbox"  id="check1"  checked="yes">
+        <label  for="check1">B</label>
+        <input  type="checkbox"  id="check2">
+        <label  for="check2">I</label>
+        <input  type="checkbox"  id="check3">
+        <label  for="check3">U</label>
+      </div>
+      <div  class="control floatLeft"  style="margin-left:25px;text-align:center;">
+        <label  for="Text Color">Text Color</label>
+        <br>
+        <div  id="colorpicker"  class="colorpickler">
+          <div  id="colorInner"  class="colorInner"  style="background-color: rgb(255, 255, 255);"><div  class="colorGradientOverlay"></div></div>
+        </div>
+      </div>
+      <div  class="control floatLeft"  style="margin-left:25px;text-align:center;">
+        <label  for="Background Color">Bg Color</label>
+        <br>
+        <div  id="colorpicker2"  class="colorpickler">
+          <div  id="colorInner2"  class="colorInner"  style="background-color: rgb(173, 3, 3);"></div>
+        </div>
+      </div>
+      <div  class="control floatLeft"  style="margin-left:25px;">
+        <label  for="Angle"  style="text-align:left;">Angle</label>
+        <br>
+        <select  id="angle">
+          <option  value="0">0°</option>
+          <option  value="45">45°</option>
+          <option  value="90">90°</option>
+          <option  value="135">135°</option>
+          <option  value="180">180°</option>
+          <option  value="225">225°</option>
+          <option  value="270">270°</option>
+          <option  value="315"  selected="">315°</option>
+          <option  value="360">360°</option>
+        </select>
+      </div>
+      <div  class="control clear">
+        <label  for="fontSize">Size</label>
+        <input  type="hidden"  name="fontSize"  id="fontSize"  value="134">
+        <input  type="hidden"  name="fontPadding"  id="fontPadding"  value="0">
+        <input  type="hidden"  name="fontColor"  id="fontColor"  value="#ffffff">
+        <input  type="hidden"  name="backgroundColor"  id="backgroundColor"  value="#ad0303">
+
+        <div  id="fontSizeSlider"  class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"><div  class="ui-slider-range ui-slider-range-min ui-widget-header"  style="width: 31.794871794871792%;"></div><a  href="http://www.3dcsstext.com/#"  class="ui-slider-handle ui-state-default ui-corner-all"  style="left: 31.794871794871792%;"></a></div>
+      </div>
+      <div  class="control">
+        <label  for="height">Height</label>
+        <input  type="hidden"  name="height"  id="height"  value="6">
+        
+        <div  id="fontHeightSlider"  class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"><div  class="ui-slider-range ui-slider-range-min ui-widget-header"  style="width: 26.31578947368421%;"></div><a  href="http://www.3dcsstext.com/#"  class="ui-slider-handle ui-state-default ui-corner-all"  style="left: 26.31578947368421%;"></a></div>
+      </div>
+      <div  class="control">
+        <label  for="heightGradientMin">Height Gradient</label>
+        <input  type="hidden"  name="heightGradientMin"  id="heightGradientMin"  value="10">
+        <input  type="hidden"  name="heightGradientMax"  id="heightGradientMax"  value="87">
+        <div  id="heightGradientSlider"  class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"><div  class="ui-slider-range ui-widget-header"  style="left: 3.9215686274509802%; width: 30.19607843137255%;"></div><a  href="http://www.3dcsstext.com/#"  class="ui-slider-handle ui-state-default ui-corner-all"  style="left: 3.9215686274509802%;"></a><a  href="http://www.3dcsstext.com/#"  class="ui-slider-handle ui-state-default ui-corner-all"  style="left: 34.11764705882353%;"></a></div>
+      </div>
+      <div  class="control">
+        <label  for="height">Shadow Opacity</label>
+        :
+        
+        <input  type="hidden"  name="shadowOpacity"  id="shadowOpacity"  value="0.6">
+        <div  id="shadowOpacitySlider"  class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"><div  class="ui-slider-range ui-slider-range-min ui-widget-header"  style="width: 60%;"></div><a  href="http://www.3dcsstext.com/#"  class="ui-slider-handle ui-state-default ui-corner-all"  style="left: 60%;"></a></div>
+      </div>
+      <div  class="control center"> </div>
+      <div  class="control">
+        <label  for="code">Code</label>
+         <p  id="fontMessage"  style="display: none;">Important!  You'll need to <a  href="http://somerandomdude.com/projects/iconic/">download the Iconic Font</a> by PJ Onori in order to use it.  It is available under a Creative Commons license.  Follow the example in the download package to implement.</p>
+        <div  id="code"> <code> /*Apply this class to some text to unlock the secrets of the third dimension!*/<br>
+          .Three-Dee{<br>
+          font-family: <span  class="fontFamily">Garamond, serif</span>;<br>
+          line-height: 1em;<br>
+          color: <span  class="fontColor">#fff9d6</span>;<br>
+          <span  class="fontStyles">
+          	
+          	
+          	
+          <span  class="fontWeight">font-weight:bold;<br></span></span>
+          font-size: <span  class="fontSize">134px</span>;<br>
+          text-shadow:<span  class="code">0px 0px 0 rgb(231,231,231),1px 1px 0 rgb(216,216,216),2px 2px 0 rgb(202,202,202),3px 3px 0 rgb(187,187,187),4px 4px 0 rgb(173,173,173),5px 5px 0 rgb(158,158,158),
+6px 6px  0 rgb(144,144,144),7px 7px 6px rgba(0,0,0,0.6),7px 7px 1px rgba(0,0,0,0.5),0px 0px 6px rgba(0,0,0,.2)</span>;}<br>
+          <br>
+          <span  style="display:none">
+          /*The background color for the body*/<br>
+          body{<br>
+          background-color:#454545;}<br>
+          <br>
+          /*This class can be applied to a div to achieve the light gradient effect on this page.  A height will have to be applied to your page specifications*/<br>
+          .gradient{<br>
+          position:absolute;<br>
+          background-image: -moz-radial-gradient(135deg, #000, #333 100%);<br>
+          background:-webkit-gradient(radial, 40% 0%, 0% 100%, from(#333), to(#000000));<br>
+          opacity:.3;<br>
+          width:100%;<br>
+          z-index:-1;}<br>
+          </span>
+          </code> </div>
+      </div>
+      <p></p>
+      <br>
+    </div>
+  </div>
+  <p></p>
+</div>
+ 
+</div>
+<footer>
+  <div  class="handle close"><a  name="x"  class="x iconic"  title="close"></a></div>
+
+<div  class="html5-logo">
+<a  href="http://www.w3.org/html/logo/">
+<img  src="./3Dtext_files/html5-badge-h-css3.png"  width="83"  height="40"  alt="HTML5 Powered with CSS3 / Styling"  title="HTML5 Powered with CSS3 / Styling">
+</a>
+</div>
+  
+  <p>A <a  href="http://www.linkedin.com/in/noahblon">Noah Blon</a> production. Get @<a  href="http://twitter.com/#!/noahblon">me</a>.</p>
+  <p>Props to <a  href="http://twitter.com/#!/mdo">@mdo</a> for the <a  href="http://www.markdotto.com/2011/01/05/3d-text-using-just-css/">inspiration</a>.</p>
+ <div  id="social-media"><iframe  id="twitter-widget-0"  scrolling="no"  frameborder="0"  allowtransparency="true"  src="./3Dtext_files/tweet_button.ff7d9077a26377d36b6a53b1a95be617.en.htm"  class="twitter-share-button twitter-tweet-button twitter-share-button twitter-count-horizontal"  title="Twitter Tweet Button"  data-twttr-rendered="true"  style="width: 116px; height: 20px;"></iframe><script  type="text/javascript"  src="./3Dtext_files/widgets.js"></script><iframe  src="./3Dtext_files/like.htm"  scrolling="no"  frameborder="0"  style="border:none; overflow:hidden; width:90px; height:20px;"  allowtransparency="true"></iframe> </div>
+ 
+</footer>
+
+<script  type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-4378218-4']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+
+<div  class="colorpicker"  id="collorpicker_503"><div  class="colorpicker_color"  style="background-color: rgb(255, 0, 255);"><div><div  style="left: 0px; top: 0px;"></div></div></div><div  class="colorpicker_hue"><div  style="top: 25px;"></div></div><div  class="colorpicker_new_color"  style="background-color: rgb(255, 255, 255);"></div><div  class="colorpicker_current_color"  style="background-color: rgb(255, 255, 255);"></div><div  class="colorpicker_hex"><input  type="text"  maxlength="6"  size="6"></div><div  class="colorpicker_rgb_r colorpicker_field"><input  type="text"  maxlength="3"  size="3"><span></span></div><div  class="colorpicker_rgb_g colorpicker_field"><input  type="text"  maxlength="3"  size="3"><span></span></div><div  class="colorpicker_rgb_b colorpicker_field"><input  type="text"  maxlength="3"  size="3"><span></span></div><div  class="colorpicker_hsb_h colorpicker_field"><input  type="text"  maxlength="3"  size="3"><span></span></div><div  class="colorpicker_hsb_s colorpicker_field"><input  type="text"  maxlength="3"  size="3"><span></span></div><div  class="colorpicker_hsb_b colorpicker_field"><input  type="text"  maxlength="3"  size="3"><span></span></div><div  class="colorpicker_submit"></div></div><div  class="colorpicker"  id="collorpicker_249"><div  class="colorpicker_color"  style="background-color: rgb(255, 0, 0);"><div><div  style="left: 147px; top: 48px;"></div></div></div><div  class="colorpicker_hue"><div  style="top: 150px;"></div></div><div  class="colorpicker_new_color"  style="background-color: rgb(173, 3, 3);"></div><div  class="colorpicker_current_color"  style="background-color: rgb(173, 3, 3);"></div><div  class="colorpicker_hex"><input  type="text"  maxlength="6"  size="6"></div><div  class="colorpicker_rgb_r colorpicker_field"><input  type="text"  maxlength="3"  size="3"><span></span></div><div  class="colorpicker_rgb_g colorpicker_field"><input  type="text"  maxlength="3"  size="3"><span></span></div><div  class="colorpicker_rgb_b colorpicker_field"><input  type="text"  maxlength="3"  size="3"><span></span></div><div  class="colorpicker_hsb_h colorpicker_field"><input  type="text"  maxlength="3"  size="3"><span></span></div><div  class="colorpicker_hsb_s colorpicker_field"><input  type="text"  maxlength="3"  size="3"><span></span></div><div  class="colorpicker_hsb_b colorpicker_field"><input  type="text"  maxlength="3"  size="3"><span></span></div><div  class="colorpicker_submit"></div></div></body></html>

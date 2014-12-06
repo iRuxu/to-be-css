@@ -1,0 +1,241 @@
+
+
+body {
+    color: white;
+    background-color: #83ADC8;
+    font-size: 9pt;
+    font-family: trebuchet ms,arial,helvetica,sans-serif;
+    margin: 0;
+}
+.wrapper {
+    margin: 0px auto;
+    padding: 0;
+    background-color: #131F27;
+
+    width: 1000px;
+}
+.header {
+    background-color: black;
+    margin: 20px 0 0;
+}
+
+.wrapper,
+.wrapper > .header {
+    -moz-border-radius: 10px 10px 0px 0px;
+    -webkit-border-radius: 10px 10px 0px 0px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.header > h1 {
+    display: inline-block;
+
+    margin: 0;
+    padding: 5px 15px;
+
+    font-size: 15pt;
+    font-weight: normal;
+    letter-spacing: -2px;
+}
+
+.content {
+    margin: 5px 15px;
+    overflow: hidden;
+}
+
+#errorMsg {
+    color: red;
+}
+
+.footer {
+    background-color: black;
+    padding: 5px 10px;
+    clear: both;
+    overflow: auto;
+}
+.footer-link {
+    text-align: center;
+}
+.header > a,
+.footer > div > a {
+    color: #6598B8;
+}
+
+.help-text {
+    padding: 0 0 15px 15px;
+}
+
+
+.flow-section {
+    display: none;
+}
+.flow-section.active {
+    display: block;
+}
+.flow-prev {
+    visibility: hidden;
+    float: left;
+}
+.flow-next {
+    visibility: hidden;
+    float: right;
+}
+.flow-prev.active,
+.flow-next.active {
+    visibility: visible;
+}
+
+
+.no-local .localDependent {
+    display: none;
+}
+
+label {
+    display: block;
+}
+.info-marker {
+    position: relative;
+    display: inline-block;
+    color: yellow;
+    font-weight: bold;
+}
+.info-marker > .info {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 300px;
+    z-index: 1000;
+    display: none;
+
+    background-color: #83ADC8;
+    color: black;
+    font-weight: normal;
+
+    padding: 8px;
+
+    -webkit-border-radius: 15px;
+    -webkit-border-top-left-radius: 0;
+    -moz-border-radius: 15px;
+    -moz-border-radius-topleft: 0;
+    border-radius: 15px;
+    border-top-left-radius: 0;
+}
+.info-marker:hover > .info {
+    display: block;
+}
+
+#pathToImage {
+    width: 250px;
+    margin-left: 0.6em;
+}
+.fileInput {
+    position: relative;
+}
+
+.fileInput > input[type="button"] {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
+
+.fileInput > input[type='file'] {
+    position: relative;
+    text-align: right;
+    opacity: 0;
+    z-index: 2;
+}
+
+
+.image-display {
+    position: relative;
+    display: inline-block;
+
+    margin: 10px 0;
+    cursor: crosshair;
+}
+#lineOverlay {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.1);
+    height: 5px;
+    border: dashed yellow 1px;
+
+    
+    -moz-transform-origin: 2px 2px;
+    -o-transform-origin: 2px 2px;
+    -webkit-transform-origin: 2px 2px;
+
+    
+    top: -1000px;
+    left: -1000px;
+    width: 0;
+}
+
+
+.gradient-preview {
+    display: inline-block;
+    width: 400px;
+}
+
+.preview-component {
+    display: block;
+    width: 100%;
+    height: 50px;
+}
+
+.display-gradient {
+    float: left;
+    margin-bottom: 15px;
+}
+.stop-editor {
+    display: none;
+    float: right;
+    margin-bottom: 15px;
+}
+.stop-editor.active {
+    display: block;
+}
+
+.delta-e-slider,
+.stop-position-slider {
+    margin: 5px 0;
+    width: 400px;
+}
+
+
+.stops-list {
+    width: 400px;
+    height: 200px;
+    overflow: auto;
+
+    border: 1px solid #333;
+}
+.color-stop {
+    padding: 5px 5px 0;
+    line-height: 30px;
+}
+.color-stop.disabled {
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+.color-stop.editing,
+.color-stop:hover {
+    background-color: #0AE;
+    cursor: pointer;
+}
+.color-preview {
+    float: left;
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+}
+.stop-editor-field {
+    display: block;
+}
+
+.generated-css {
+    padding: 15px;
+    overflow: auto;
+    clear: both;
+
+    border: 1px solid #333;
+}
