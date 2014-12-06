@@ -1,0 +1,130 @@
+
+
+.borderGenerator label {
+    float: left;
+    width: 10em;
+    text-align: right;
+}
+
+.borderGenerator input[type="text"] {
+    width: 250px;
+    margin-left: 0.6em;
+}
+
+.borderGenerator > div > h2 {
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    display: inline-block;
+}
+
+.borderGenerator .setupSection > div {
+    padding: 5px 0px;
+}
+
+#borderOptionsExpander {
+    display: inline-block;
+}
+
+#cssEl {
+    white-space: pre;
+    border-style: solid;
+}
+
+#editorEl {
+    position: relative;
+    float: right;
+    margin-right: 25px;
+    border: 2px solid white;
+}
+#editorEl > .ui-resizable-s,
+#editorEl > .ui-resizable-sw {
+    bottom: -7px;
+}
+#editorEl > .ui-resizable-w,
+#editorEl > .ui-resizable-sw {
+    left: -7px;
+}
+
+#imageEl {
+    width: 100%;
+    height: 100%;
+    -ms-interpretation-mode: nearest-neighbor;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+}
+
+.borderGenerator .divider {
+    background-color: red;
+    opacity: 0.8;
+    cursor: move;
+
+    position: absolute;
+    width: 2px;
+    height: 2px;
+}
+
+.borderGenerator .top-divider,
+.borderGenerator .bottom-divider {
+    width: 100%;
+    left: 0px;
+}
+.borderGenerator .top-divider {
+    top: 0px;
+}
+.borderGenerator .bottom-divider {
+    bottom: 0px;
+}
+
+.borderGenerator .left-divider,
+.borderGenerator .right-divider {
+    top: 0px;
+    height: 100%;
+}
+.borderGenerator .left-divider {
+    left: 0px;
+}
+.borderGenerator .right-divider {
+    right: 0px;
+}
+
+.borderGenerator .slider {
+    display: inline-block;
+    width: 200px;
+    margin: 0 0.6em;
+}
+
+.borderGenerator .ui-icon {
+    background-image: url("http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/themes/ui-lightness/images/ui-icons_ffffff_256x240.png");
+    display: inline-block;
+}
+
+.errorMsg {
+    color: red;
+    padding: 10px;
+}
+
+.no-local .localDependent {
+    display: none;
+}
+
+
+.fileInput {
+    position: relative;
+}
+
+.fileInput > input[type="button"] {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
+
+.fileInput > input[type='file'] {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    text-align: right;
+    opacity: 0;
+    z-index: 2;
+}

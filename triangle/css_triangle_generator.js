@@ -11,6 +11,12 @@ $(function(){
 		$(this).parent().css('color','#00ccff');
 	})
 
+	
+	/*if($("#ie6").is(':checked')){
+		$(this).css('color','#00ccff');
+	}else{
+		$(this).css('color','#ccc');
+	}*/
 	var ie6state=false;
 	$("#ie6").change(function(){
 		if(ie6state == false){
@@ -24,6 +30,34 @@ $(function(){
 			console.log(ie6state);
 		}
 	})
+
+	/*$('#ie6').change(function(){
+		updateCSS();
+	});*/
+
+	/*$('#colorPicker').ColorPicker({
+		color: '#007bff',
+		flat: true,
+		onChange: function (hsb, hex, rgb) {
+			$('#color').val('#' + hex);
+			updateCSS();
+		}
+	});*/
+
+	/*$("#colorPicker").colpick({
+	  layout:'rgbhex',
+	  submit:0,
+	  colorScheme:'dark',
+	  onChange:function(hsb,hex,rgb,el,bySetColor) {
+	  $(el).css('border-color','#'+hex);
+	  if(!bySetColor) $(el).val(hex);
+	  updateCSS();
+	  }
+	}).keyup(function(){
+	  $(this).colpickSetColor(this.value);
+	  updateCSS();
+	});*/
+
 
 	//复制代码
 	function b(f) {
@@ -393,33 +427,7 @@ $(function(){
 		updateCSS();
 	});
 	
-	$('#ie6').change(function(){
-		updateCSS();
-	});
 	
-	/*$('#colorPicker').ColorPicker({
-		color: '#007bff',
-		flat: true,
-		onChange: function (hsb, hex, rgb) {
-			$('#color').val('#' + hex);
-			updateCSS();
-		}
-	});*/
-	
-	$("#colorPicker").colpick({
-	  layout:'rgbhex',
-	  submit:0,
-	  colorScheme:'dark',
-	  onChange:function(hsb,hex,rgb,el,bySetColor) {
-	  $(el).css('border-color','#'+hex);
-	  if(!bySetColor) $(el).val(hex);
-	  updateCSS();
-	  }
-	}).keyup(function(){
-	  $(this).colpickSetColor(this.value);
-	  updateCSS();
-	});
-
 
 	$('#data').submit(function(){
 		updateCSS();
