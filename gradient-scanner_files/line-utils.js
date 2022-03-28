@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2011 Kevin Decker (http://www.incaseofstairs.com/)
+ * Copyright (c) 2011 Kevin Decker (https://www.incaseofstairs.com/)
  * See LICENSE for license information
  */
 var LineUtils;
@@ -178,7 +178,7 @@ LineUtils = {
     },
 
     /**
-     * Calculates the gradient start and end points as defined by http://dev.w3.org/csswg/css3-images/#linear-gradients
+     * Calculates the gradient start and end points as defined by https://dev.w3.org/csswg/css3-images/#linear-gradients
      * as well as the color stop adjustment values to fix the color stops to an centroid angle gradient.
      */
     gradientPoints: function(start, end, container) {

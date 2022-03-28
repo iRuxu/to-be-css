@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2011 Kevin Decker (http://www.incaseofstairs.com/)
+ * Copyright (c) 2011 Kevin Decker (https://www.incaseofstairs.com/)
  * See LICENSE for license information
  */
 var ColorStops = {};
@@ -31,19 +31,19 @@ var ColorStops = {};
     }
 
     function RGBtoXYZ(color) {
-        // Algorithm from http://www.brucelindbloom.com/Eqn_RGB_to_XYZ.html
+        // Algorithm from https://www.brucelindbloom.com/Eqn_RGB_to_XYZ.html
         var R = color[0] / 255,
             G = color[1] / 255,
             B = color[2] / 255;
 
         // Inverse Gamma Compounding, using Adobe RGB (1998) color
-        //      http://www.brucelindbloom.com/WorkingSpaceInfo.html#Specifications
+        //      https://www.brucelindbloom.com/WorkingSpaceInfo.html#Specifications
         var r = Math.pow(R, 2.2),
             g = Math.pow(G, 2.2),
             b = Math.pow(B, 2.2);
 
         // Constants here are constructed from the M value for Adobe RGB (1998) defined
-        // here: http://www.brucelindbloom.com/Eqn_RGB_XYZ_Matrix.html
+        // here: https://www.brucelindbloom.com/Eqn_RGB_XYZ_Matrix.html
         return [
             (0.5767309*r + 0.1855540*b + 0.1881852*g),
             (0.2973769*r + 0.6273491*b  + 0.0752741*g),
@@ -51,7 +51,7 @@ var ColorStops = {};
         ];
     }
     function XYZtoLAB(color) {
-        // Algorithm from: http://www.brucelindbloom.com/Eqn_XYZ_to_Lab.html
+        // Algorithm from: https://www.brucelindbloom.com/Eqn_XYZ_to_Lab.html
         const X_r=0.95047, Y_r=1.00, Z_r=1.08883,
             EPSILON = 0.008856,
             KAPPA = 903.3;

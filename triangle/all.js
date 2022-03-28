@@ -4,7 +4,7 @@
  * Copyright Facebook Inc.
  *
  * Licensed under the Apache License, Version 2.0
- * http://www.apache.org/licenses/LICENSE-2.0
+ * https://www.apache.org/licenses/LICENSE-2.0
  */
 try {
 	window.FB || (function(window) {
@@ -255,7 +255,7 @@ try {
 		 * @providesModule JSON3
 		 * @preserve-header
 		 *
-		 *! JSON v3.2.3 | http://bestiejs.github.com/json3 | Copyright 2012, Kit Cambridge | http://kit.mit-license.org
+		 *! JSON v3.2.3 | https://bestiejs.github.com/json3 | Copyright 2012, Kit Cambridge | https://kit.mit-license.org
 		 */
 		__d("JSON3", [], function(a, b, c, d, e, f) {
 			(function() {
@@ -1725,7 +1725,7 @@ try {
 					var k = typeof j == 'undefined' ? location.protocol.replace(':', '') : j ? 'https' : 'http';
 					if (i in g) return k + '://' + g[i];
 					if (typeof j == 'undefined' && i + '_' + k in g) return k + '://' + g[i + '_' + k];
-					if (j !== true && i + '_http' in g) return 'http://' + g[i + '_http'];
+					if (j !== true && i + '_http' in g) return 'https://' + g[i + '_http'];
 					if (j !== false && i + '_https' in g) return 'https://' + g[i + '_https'];
 				}
 			};

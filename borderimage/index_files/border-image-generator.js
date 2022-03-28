@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2010 Kevin Decker (http://www.incaseofstairs.com/)
+ * Copyright (c) 2010 Kevin Decker (https://www.incaseofstairs.com/)
  * See LICENSE for license information
  */
 $(document).ready(function() {
@@ -16,7 +16,7 @@ $(document).ready(function() {
         naturalSize = {},
 
         state = {
-            src: "http://www.w3.org/TR/css3-background/border.png",
+            src: "https://www.w3.org/TR/css3-background/border.png",
 
             linkBorder: true,
             borderWidth: [0, 0, 0, 0],

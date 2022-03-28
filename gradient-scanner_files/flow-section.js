@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2011 Kevin Decker (http://www.incaseofstairs.com/)
+ * Copyright (c) 2011 Kevin Decker (https://www.incaseofstairs.com/)
  * See LICENSE for license information
  */
 (function ($) {

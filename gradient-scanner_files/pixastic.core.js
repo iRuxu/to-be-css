@@ -1,7 +1,7 @@
 /*
  * Pixastic Lib - Core Functions - v0.1.3
- * Copyright (c) 2008 Jacob Seidelin, jseidelin@nihilogic.dk, http://blog.nihilogic.dk/
- * License: [http://www.pixastic.com/lib/license.txt]
+ * Copyright (c) 2008 Jacob Seidelin, jseidelin@nihilogic.dk, https://blog.nihilogic.dk/
+ * License: [https://www.pixastic.com/lib/license.txt]
  */
 
 var Pixastic = (function() {
@@ -92,7 +92,7 @@ var Pixastic = (function() {
 	if (typeof pixastic_parseonload != "undefined" && pixastic_parseonload)
 		onready(init);
 
-	// getElementsByClass by Dustin Diaz, http://www.dustindiaz.com/getelementsbyclass/
+	// getElementsByClass by Dustin Diaz, https://www.dustindiaz.com/getelementsbyclass/
 	function getElementsByClass(searchClass,node,tag) {
 	        var classElements = new Array();
 	        if ( node == null )

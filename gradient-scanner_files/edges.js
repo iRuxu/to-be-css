@@ -1,7 +1,7 @@
 /*
  * Pixastic Lib - Edge detection filter - v0.1.1
- * Copyright (c) 2008 Jacob Seidelin, jseidelin@nihilogic.dk, http://blog.nihilogic.dk/
- * License: [http://www.pixastic.com/lib/license.txt]
+ * Copyright (c) 2008 Jacob Seidelin, jseidelin@nihilogic.dk, https://blog.nihilogic.dk/
+ * License: [https://www.pixastic.com/lib/license.txt]
  */
 
 Pixastic.Actions.edges = {

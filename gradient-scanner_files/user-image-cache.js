@@ -1,10 +1,10 @@
 /*
- * Copyright (c) 2010-2011 Kevin Decker (http://www.incaseofstairs.com/)
+ * Copyright (c) 2010-2011 Kevin Decker (https://www.incaseofstairs.com/)
  * See LICENSE for license information
  */
 // Specs in use:
-// http://www.w3.org/TR/FileAPI/
-// http://www.w3.org/TR/webstorage/
+// https://www.w3.org/TR/FileAPI/
+// https://www.w3.org/TR/webstorage/
 var UserImageCache;
 (function() {
     var curEntry,

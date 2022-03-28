@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2011 Kevin Decker (http://www.incaseofstairs.com/)
+ * Copyright (c) 2011 Kevin Decker (https://www.incaseofstairs.com/)
  * See LICENSE for license information
  */
 /*global $,jQuery,LineUtils,ImageDataUtils,UserImageCache,GradientScanner */
@@ -34,7 +34,7 @@ $(document).ready(function() {
         })
         .error(function() { errorHandler(); });
     UserImageCache.setImageEl(loader);
-    UserImageCache.setRemoteProxy("http://" + location.host + "/proxy?href=");
+    UserImageCache.setRemoteProxy("https://" + location.host + "/proxy?href=");
 
     // User Input Setup
     pathToImage.change(function(event) {

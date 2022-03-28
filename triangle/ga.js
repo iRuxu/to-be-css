@@ -221,7 +221,7 @@
 	function Pa(a, b) {
 		if (F(a) || "[" == a[ma](0) && "]" == a[ma](a[w] - 1)) return "-";
 		var c = J.domain;
-		return a[q](c + (b && "/" != b ? b : "")) == (0 == a[q]("http://") ? 7 : 0 == a[q]("https://") ? 8 : 0) ? "0" : a
+		return a[q](c + (b && "/" != b ? b : "")) == (0 == a[q]("https://") ? 7 : 0 == a[q]("https://") ? 8 : 0) ? "0" : a
 	};
 	var Qa = 0;
 
@@ -2063,7 +2063,7 @@
 			d && (d.q = f)
 		};
 	var Ne = function() {
-			return "https:" == J[z][A] || M.G ? "https://ssl.google-analytics.com" : "http://www.google-analytics.com"
+			return "https:" == J[z][A] || M.G ? "https://ssl.google-analytics.com" : "https://www.google-analytics.com"
 		},
 		Ce = function(a) {
 			ha(this, "len");
